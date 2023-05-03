@@ -17,7 +17,7 @@ const ActionCard = () => {
       <Text style={styles.headingText}>ActionCard</Text>
       <View style={[styles.card, styles.elevated]}>
         <View style={styles.headingContainer}>
-          <Text style={styles.headerText}>JS Bro</Text>
+          <Text style={styles.headerText}>What's new in Dota 2</Text>
         </View>
         <Image
           source={{
@@ -26,7 +26,7 @@ const ActionCard = () => {
           style={{height: 330}}
         />
         <View style={styles.bodyContainer}>
-          <Text numberOfLines={4}>
+          <Text style={styles.paraText} numberOfLines={4}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolorem
             nesciunt quas magnam. Architecto itaque velit tempore deserunt ea
             repellat mollitia ex dolore distinctio eaque. Iste alias tempore
@@ -39,7 +39,7 @@ const ActionCard = () => {
             onPress={() => {
               openWebsite('https://mashable.com/category/gaming');
             }}>
-            <Text>Read More</Text>
+            <Text style={styles.linkText}>Read More</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() => {
@@ -47,7 +47,7 @@ const ActionCard = () => {
                 'https://www.linkedin.com/in/nikhil-singh-64a414160/',
               );
             }}>
-            <Text>Follow Me</Text>
+            <Text style={styles.linkText}>Follow Me</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -62,11 +62,55 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginHorizontal: 15,
+    marginTop: 20,
   },
-  card: {},
-  elevated: {},
-  headingContainer: {},
-  headerText: {},
-  bodyContainer: {},
-  footerContainer: {},
+  card: {
+    width: '90%',
+    height: 550,
+    borderRadius: 6,
+    marginHorizontal: 20,
+    marginVertical: 10,
+  },
+  elevated: {
+    backgroundColor: '#2a0845',
+    elevation: 10,
+    shadowOffset: {
+      width: 100,
+      height: 100,
+    },
+    shadowColor: '#333',
+    shadowOpacity: 0.4,
+  },
+  headingContainer: {
+    marginVertical: 12,
+  },
+  headerText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginHorizontal: 15,
+    marginVertical: 5,
+    color: 'white',
+  },
+  bodyContainer: {
+    marginVertical: 10,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  paraText: {
+    color: 'white',
+  },
+  linkText: {
+    color: 'black',
+    padding: 5,
+    margin: 15,
+    backgroundColor: 'white',
+    borderRadius: 4,
+  },
+  footerContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 9,
+  },
 });

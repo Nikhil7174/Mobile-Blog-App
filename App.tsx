@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   View,
@@ -7,40 +7,41 @@ import {
   StyleSheet,
   useColorScheme,
   StatusBar,
-  ScrollView
-} from "react-native"
-import FlatCards from "./components/FlatCards";
-import ElevatedCards from "./components/ElevatedCards";
-import FancyCards from "./components/FancyCards";
-import ActionCard from "./components/ActionCard";
+  ScrollView,
+} from 'react-native';
+import FlatCards from './components/FlatCards';
+import ElevatedCards from './components/ElevatedCards';
+import FancyCards from './components/FancyCards';
+import ActionCard from './components/ActionCard';
+import ContactList from './components/ContactList';
 
-const App = ():JSX.Element =>{
-  const isDarkMode = useColorScheme()==='dark'
-    return(
-      <SafeAreaView style={styles.container}>
+const App = (): JSX.Element => {
+  const isDarkMode = useColorScheme() === 'dark';
+  return (
+    <SafeAreaView style={styles.container}>
       <ScrollView>
-      <View >
-        <FlatCards/>
-        <ElevatedCards/>
-        <FancyCards/>
-        <ActionCard/>
-      </View>
+        <View>
+          <FlatCards />
+          <ElevatedCards />
+          <FancyCards />
+          <ActionCard />
+          <ContactList />
+        </View>
       </ScrollView>
-      </SafeAreaView>
-    )
-  
-}
+    </SafeAreaView>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  whiteText:{
-    color:'#ffffff'
+  whiteText: {
+    color: '#ffffff',
   },
-  darkText:{
-    color:'purple'
-  }
-})
+  darkText: {
+    color: 'purple',
+  },
+});
 
-export default App
+export default App;
